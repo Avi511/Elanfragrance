@@ -270,7 +270,7 @@ const AddProductModal = ({ isOpen, onClose, onSuccess }) => {
                                         <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full" /> Status Configuration
                                     </h3>
                                     
-                                    <div className="grid grid-cols-3 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                         {[
                                             { name: 'isNewArrival', label: 'New Arrival', icon: Sparkles, color: 'emerald' },
                                             { name: 'isBestSeller', label: 'Best Seller', icon: Zap, color: 'amber' },

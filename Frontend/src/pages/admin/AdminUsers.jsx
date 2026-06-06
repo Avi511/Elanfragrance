@@ -235,7 +235,7 @@ const AdminUsers = () => {
                             >
                                 <h3 className="text-3xl font-serif mb-8">Refine Signature</h3>
                                 <form onSubmit={handleUpdate} className="space-y-6">
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-1">
                                             <label className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest ml-1">First Name</label>
                                             <input type="text" value={editForm.firstName} onChange={(e) => setEditForm({ ...editForm, firstName: e.target.value })} className="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 text-sm" />

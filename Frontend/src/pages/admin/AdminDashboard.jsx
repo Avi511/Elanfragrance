@@ -263,7 +263,7 @@ const AdminDashboard = () => {
                                     </div>
 
                                     <form onSubmit={handleRegisterSeller} className="space-y-8">
-                                        <div className="grid grid-cols-2 gap-6">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             <div className="space-y-2">
                                                 <label className="text-[10px] text-zinc-300 font-bold uppercase tracking-widest ml-1">Legal First Name</label>
                                                 <input

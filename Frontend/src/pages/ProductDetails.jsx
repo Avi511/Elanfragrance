@@ -167,7 +167,7 @@ function ProductDetails() {
               {product.description || "An olfactory journey crafted with the finest essences, designed to linger in memory as an invisible accessory of power."}
             </p>
 
-            <div className="grid grid-cols-2 gap-8 border-y border-white/5 py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-y border-white/5 py-8">
               <div className="space-y-2">
                 <span className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-400">Brand</span>
                 <p className="font-serif text-lg">{product.brand || "Élan Fragrance"}</p>
