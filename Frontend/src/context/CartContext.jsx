@@ -15,6 +15,8 @@ export const CartProvider = ({ children }) => {
   const isInitialMount = useRef(true);
   const isSyncingFromBackend = useRef(false);
 
+  const prevUserRef = useRef(user);
+
   useEffect(() => {
     if (user) {
       const loadCart = async () => {
@@ -34,7 +36,13 @@ export const CartProvider = ({ children }) => {
         }
       };
       loadCart();
+    } else {
+      if (prevUserRef.current) {
+        setCartItems([]);
+        localStorage.removeItem("cartItems");
+      }
     }
+    prevUserRef.current = user;
   }, [user]);
 
   useEffect(() => {
