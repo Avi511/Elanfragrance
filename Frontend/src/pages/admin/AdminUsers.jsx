@@ -199,13 +199,15 @@ const AdminUsers = () => {
                                                     >
                                                         <Edit3 size={14} />
                                                     </button>
-                                                    <button
-                                                        onClick={() => handleDelete(u._id)}
-                                                        className="p-3 bg-zinc-800 hover:bg-red-600 hover:text-white rounded-xl transition-all shadow-xl active:scale-95"
-                                                        title="Revoke Signature"
-                                                    >
-                                                        <UserX size={14} />
-                                                    </button>
+                                                    {!u.isAdmin && (
+                                                        <button
+                                                            onClick={() => handleDelete(u._id)}
+                                                            className="p-3 bg-zinc-800 hover:bg-red-600 hover:text-white rounded-xl transition-all shadow-xl active:scale-95"
+                                                            title="Revoke Signature"
+                                                        >
+                                                            <UserX size={14} />
+                                                        </button>
+                                                    )}
                                                 </div>
                                             </td>
                                         </motion.tr>

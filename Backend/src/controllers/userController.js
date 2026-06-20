@@ -68,6 +68,9 @@ export const deleteUserProfile = async (req, res) => {
 
         const user = await User.findById(targetUserId);
         if (user) {
+            if (user.isAdmin) {
+                return res.status(400).json({ error: "Administrative core signatures cannot be purged" });
+            }
             await user.deleteOne();
             res.json({ message: "User removed successfully" });
         } else {
